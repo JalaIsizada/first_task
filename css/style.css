@@ -1,0 +1,141 @@
+:root {
+    --yasil: #53d153;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+    background: url('../img/headerbg.jpg') center/cover;
+}
+nav {
+    padding: 5px 30px;
+}
+menu, #search { flex: 1 1 40%; }
+menu li { padding: 5px 10px;}
+menu li a {
+    font: bold 1em 'Proxima Nova';
+    color: #fff;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+h1 {
+    font: 700 2em Montserrat;
+    color: #fff;
+}
+h2 {
+    font: 1.2em Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #818181;
+}
+h3 {
+    font: bold 1.5em Proxima Nova;
+    color: #818181;
+}
+h6 {
+    font: 1em 'Myriad Pro';
+    color: #b3b3b3;
+}
+hr {
+    display: inline-block;
+    border-top: 2px solid #818181;
+    width: 43px;
+}
+.bgyasil h2 { color: #207b20}
+.bgyasil hr { border-top: 2px solid #207b20}
+.bgyasil h6 { color: #2b9b2b}
+#search {
+    display: flex;
+    justify-content: center;
+}
+#search input, #search button {
+    border: none;
+    outline: none;
+    background: #ffffffcc;
+    padding: 5px 15px;
+}
+#search input { border-radius: 1em 0 0 1em }
+#search button { border-radius: 0 1em 1em 0 }
+#search button img { height: 15px; }
+
+main section { 
+    padding: 40px 0;
+    text-align: center;
+}
+
+#art3 { padding: 48px 0 }
+#art3 article { padding: 24px 1em }
+
+#btn3 { 
+    display: inline-flex; 
+    padding: 50px 0
+}
+#btn3 button {
+    border: 1px solid #2b9b2b;
+    font: 1em 'Proxima Nova';
+    background: #fff;
+    color: #2b9b2b;
+    padding: 6px 21px;
+}
+#btn3 button.active, #btn3 button:hover {
+    background: #2b9b2b;
+    color: #fff;
+}
+#btn3 button:first-child { border-radius: 18px 0 0 18px; }
+#btn3 button:last-child { border-radius: 0 18px 18px 0; }
+
+#gallery img { 
+    width: 100%;
+    padding: .5em 1em;
+}
+
+.bgag { background: #fff }
+.bgboz { background: #f1f1f1 }
+.bgyasil { background: var(--yasil) }
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 30px;
+    background: #e0f3e0;
+    font-size: 4.5em;
+    color: var(--yasil);
+}
+
+@media only screen and (min-width: 768px) {
+    nav { 
+        display: flex;
+        justify-content: space-between;
+    }
+    menu {
+        display: flex;
+        order: -1
+    }
+    menu li a.active, menu li a:hover { border-top: 5px solid var(--yasil); }
+    #search { justify-content: end }
+    h1 { font-size: 3.4em }
+    #art3 { 
+        display: flex;
+        justify-content: center;
+    }
+    #art3 article { flex: 0 1 350px }
+    #gallery { 
+        max-width: 950px;
+        margin: auto;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #gallery img { 
+        width: 10em;
+        height: 10em;
+        object-fit: cover;
+        padding: .5em;
+    }
+}
